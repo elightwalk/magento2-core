@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Elightwalk_Core::Elightwalk" title="Elightwalk" module="Elightwalk_Core" sortOrder="10" resource="Elightwalk_Core::Elightwalk" />
+        <add id="Elightwalk_Core::config" title="Elightwalk" module="Elightwalk_Core" sortOrder="1" parent="Elightwalk_Core::Elightwalk" action="adminhtml/system_config/edit/section/elightwalk" resource="Elightwalk_Core::config" />
+    </menu>
+</config>

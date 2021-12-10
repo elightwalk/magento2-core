@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Elightwalk
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Elightwalk.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.elightwalk.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Elightwalk
+ * @package     Elightwalk_Core
+ * @copyright   Copyright (c) Elightwalk (https://www.elightwalk.com/)
+ * @license     https://www.elightwalk.com/LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="elightwalk" frontName="elightwalk">
+            <module name="Elightwalk_Core" />
+        </route>
+    </router>
+</config>

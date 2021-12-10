@@ -1,0 +1,33 @@
+.admin__menu .level-0.item-elightwalk > a:before {
+    content:"";
+    margin:  0px 0px 3px;
+    background: url(../images/logo-main-2.svg) no-repeat center center;
+    background-size: 50px 30px;
+    height: 2.8rem;
+    top: -0.4rem;
+    display: block;
+    font-size: 2.2rem;
+    margin-bottom: .3rem;
+}
+.admin__menu .level-0.elightwalk_active > a:before,
+.admin__menu .level-0.item-elightwalk:hover > a:before{
+    content:"";
+    background: url(../images/logo-main-3.svg) no-repeat center center;
+    background-size: 50px 30px;
+    height: 2.8rem;
+    top: -0.4rem;
+    display: block;
+    font-size: 2.2rem;
+    margin-bottom: .3rem;
+}
+/* add below to add logo on admin */
+.config-nav-block.elightwalk-tab strong:before {
+    background: url(../images/logo-main.svg) no-repeat;
+    width: 25px;
+    height: 25px;
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    background-size: 100% 100%;
+}
