@@ -1,0 +1,28 @@
+{
+    "name": "elightwalk/core",
+    "description": "Elightwalk Core",
+    "require": {
+      "php": "^7.4.3"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+      "Commercial"
+    ],
+    "authors": [
+      {
+        "name": "Elightwalk",
+        "email": "hello@Elightwalk.com",
+        "homepage": "https://www.elightwalk.com/",
+        "role": "Leader"
+      }
+    ],
+    "autoload": {
+      "files": [
+        "registration.php"
+      ],
+      "psr-4": {
+        "Elightwalk\\Core\\": ""
+      }
+    }
+}
