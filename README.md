@@ -1,6 +1,4 @@
-# Core
-Elightwalk Core Extension
-How to Install
+# Installation
 
   1.  Extract the zip file and push to app -> code
 
