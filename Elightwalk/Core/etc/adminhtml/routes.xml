@@ -7,7 +7,7 @@
  *
  * This source file is subject to the Elightwalk.com license that is
  * available through the world-wide-web at this URL:
- * https://www.elightwalk.com/LICENSE.txt
+ * https://store.elightwalk.com/licence
  *
  * DISCLAIMER
  *
@@ -17,7 +17,7 @@
  * @category    Elightwalk
  * @package     Elightwalk_Core
  * @copyright   Copyright (c) Elightwalk (https://www.elightwalk.com/)
- * @license     https://www.elightwalk.com/LICENSE.txt
+ * @license     https://store.elightwalk.com/licence
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
