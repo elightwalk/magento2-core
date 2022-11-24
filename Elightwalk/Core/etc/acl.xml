@@ -24,7 +24,7 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Elightwalk_Core::menu" title="Elightwalk"/>
+                <resource id="Elightwalk_Core::elightwalk" title="Elightwalk"/>
             </resource>
         </resources>
     </acl>
