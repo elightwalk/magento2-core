@@ -2,7 +2,7 @@
     "name": "elightwalk/magento2_core",
     "description": "Elightwalk Core",
     "require": {
-      "php": "^7.4.3"
+      "php": "^8.1.6"
     },
     "type": "magento2-module",
     "version": "1.0.0",
