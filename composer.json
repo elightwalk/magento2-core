@@ -6,6 +6,15 @@
     },
     "type": "magento2-module",
     "version": "1.0.0",
+    "keywords": [
+      "extension",
+      "markeplace",
+      "modules",
+      "magento2",
+      "elightwalk",
+      "php",
+      "core_elightwalk"
+    ],
     "license": [
       "Commercial"
     ],
