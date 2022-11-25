@@ -1,5 +1,5 @@
 {
-    "name": "elightwalk_core",
+    "name": "elightwalk/magento2_core",
     "description": "Elightwalk Core",
     "require": {
       "php": "^7.4.3"
