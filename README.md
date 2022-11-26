@@ -1,8 +1,6 @@
 # Installation
 
-  1.  Extract the zip file and push to app -> code
-
-  2.  Fire below commands
+    -> composer require elightwalk/magento2_core
 
     -> php bin/magento module:enable Elightwalk_Core
 
