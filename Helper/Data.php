@@ -25,7 +25,7 @@ namespace Elightwalk\Core\Helper;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
-class Data extends \Magento\Catalog\Helper\Data
+class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**
      * @var ScopeConfigInterface
