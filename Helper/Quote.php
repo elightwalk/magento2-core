@@ -49,7 +49,7 @@ class Quote extends AbstractHelper
     /**
      * @var StoreManagerInterface
      */
-    protected $storeManager;
+    protected $_storeManager;
     /**
      * __construct
      *
@@ -80,7 +80,6 @@ class Quote extends AbstractHelper
                 $quote = $this->_quoteRepository->get($order->getQuoteId());
                 $quote->setIsActive(1)->setReservedOrderId(null);
                 $this->_quoteRepository->save($quote);
-                /*  $quote->save(); */
                 $this->replaceQuote($quote, $order);
                 $this->_eventManager->dispatch('restore_quote', ['order' => $order, 'quote' => $quote]);
                 return true;
@@ -90,6 +89,7 @@ class Quote extends AbstractHelper
         }
         return false;
     }
+
     /**
      * Replace the quote in the session with a specified object
      *
@@ -101,6 +101,7 @@ class Quote extends AbstractHelper
         $this->setQuoteId($quote->getId(), $order);
         return $this;
     }
+    
     /**
      * Set the current session's quote id
      *
