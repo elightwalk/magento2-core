@@ -60,7 +60,7 @@ class RestoreQuote implements RestoreQuoteInterface
     /**
      * @inheritdoc
      */
-    public function getRestoreQuote(string $incrementId)
+    public function restoreQuote(string $incrementId)
     {
         if (empty($incrementId)) {
             throw new GraphQlInputException(__('Required parameter "incrementId" is missing'));

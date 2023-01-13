@@ -30,5 +30,5 @@ interface RestoreQuoteInterface
      * @param string $incrementId
      * @return mixed|null
      */
-    public function getRestoreQuote(string $incrementId);
+    public function restoreQuote(string $incrementId);
 }
