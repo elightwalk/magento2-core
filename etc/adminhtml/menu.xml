@@ -23,6 +23,6 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="Elightwalk_Core::elightwalk" title="Elightwalk" module="Elightwalk_Core" sortOrder="10" resource="Elightwalk_Core::elightwalk" />
-        <add id="Elightwalk_Core::config" title="Configuration" module="Elightwalk_Core" sortOrder="1" parent="Elightwalk_Core::elightwalk" resource="Elightwalk_Core::config" />    
+        <add id="Elightwalk_Core::config" title="Elightwalk" module="Elightwalk_Core" sortOrder="1" parent="Elightwalk_Core::elightwalk" action="adminhtml/system_config/edit/section/elightwalk" resource="Elightwalk_Core::config" />
     </menu>
 </config>

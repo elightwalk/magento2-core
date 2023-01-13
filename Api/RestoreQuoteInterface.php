@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<!--
+<?php
+
 /**
  * Elightwalk
  *
@@ -19,11 +19,16 @@
  * @copyright   Copyright (c) Elightwalk (https://www.elightwalk.com/)
  * @license     https://store.elightwalk.com/licence
  */
--->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
-    <system>
-        <tab id="elightwalk" translate="label" class="elightwalk-tab" sortOrder="10">
-            <label>Elightwalk</label>
-        </tab>
-    </system>
-</config>
+
+namespace Elightwalk\Core\Api;
+
+interface RestoreQuoteInterface
+{
+    /**
+     * Get Restore Quote
+     *
+     * @param string $incrementId
+     * @return mixed|null
+     */
+    public function getRestoreQuote(string $incrementId);
+}
