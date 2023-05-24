@@ -1,21 +1,36 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
+
 declare(strict_types=1);
 
 namespace Elightwalk\Core\Graphql\Resolver\Quote;
+
+/**
+ * Elightwalk
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Elightwalk.com license that is
+ * available through the world-wide-web at this URL:
+ * https://store.elightwalk.com/licence
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category  Elightwalk
+ * @package   Elightwalk_Core
+ * @copyright Copyright (c) Elightwalk (https://www.elightwalk.com/)
+ * @license   https://store.elightwalk.com/licence
+ */
 
 use Magento\Framework\GraphQl\Exception\GraphQlInputException;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
-use Magento\Framework\App\Config\ScopeConfigInterface as ScopeConfig;
 use Magento\Quote\Api\CartRepositoryInterface;
 use Magento\Sales\Model\OrderFactory;
 use Elightwalk\Core\Helper\Quote;
-
 
 class RestoreQuote implements ResolverInterface
 {
@@ -35,19 +50,22 @@ class RestoreQuote implements ResolverInterface
     protected $_quoteHelper;
 
     /**
+     * __construct
+     *
+     * @param CartRepositoryInterface $quoteRepository
+     * @param OrderFactory $orderFactory
      * @param Quote $quoteHelper
-     * @param ScopeConfig $scopeConfig
      */
     public function __construct(
         CartRepositoryInterface $quoteRepository,
         OrderFactory $orderFactory,
         Quote $quoteHelper
     ) {
-        $this->_quoteRepository  = $quoteRepository;
-        $this->_orderFactory = $orderFactory;
-        $this->_quoteHelper  = $quoteHelper;
+        $this->_quoteRepository = $quoteRepository;
+        $this->_orderFactory    = $orderFactory;
+        $this->_quoteHelper     = $quoteHelper;
     }
-    
+
     /**
      * @inheritdoc
      */

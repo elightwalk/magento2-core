@@ -16,10 +16,10 @@ namespace Elightwalk\Core\Helper;
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  *
- * @category    Elightwalk
- * @package     Elightwalk_Core
- * @copyright   Copyright (c) Elightwalk (https://www.elightwalk.com/)
- * @license     https://store.elightwalk.com/licence
+ * @category  Elightwalk
+ * @package   Elightwalk_Core
+ * @copyright Copyright (c) Elightwalk (https://www.elightwalk.com/)
+ * @license   https://store.elightwalk.com/licence
  */
 
 use Magento\Store\Model\ScopeInterface;
@@ -32,16 +32,23 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     protected $_scopeConfig;
 
+    /**
+     * __construct
+     *
+     * @param ScopeConfigInterface $scopeConfig
+     */
     public function __construct(
         ScopeConfigInterface $scopeConfig
     ) {
         $this->_scopeConfig = $scopeConfig;
     }
+
     /**
-     * return module status with module name
+     * GetModuleConfig
+     *
      * @param string $path
-     * @param string $storeCode
-     * @return array
+     * @param int|null $storeId
+     * @return void
      */
     public function getModuleConfig($path, $storeId = null)
     {
