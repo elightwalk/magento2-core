@@ -1,6 +1,6 @@
 # Name :
 
-=> Elightwalk core module.
+=> Elightwalk Core Extension.
 
 
 # Descriptions :
