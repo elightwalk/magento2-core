@@ -2,11 +2,9 @@
 
 Elightwalk Core Extension.
 
-
 # Descriptions :
 
 Elightwalk_Core extension provides the basic requirements for other elightwalk modules.
-
 
 # Installation :
 
