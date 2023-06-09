@@ -30,7 +30,7 @@ Go to Magento root and then below **commands**
 
 ## 1.0.2
 
-    => Add a "Configuration" menu to maintain the configuration of other module.
+    => Add a "Configuration" menu to maintain the configuration of other module. 
 
 ## 1.0.1
 
