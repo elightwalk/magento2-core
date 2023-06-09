@@ -1,12 +1,10 @@
 # Name :
 
-=> Elightwalk core module.
-
+Elightwalk Core Extension.
 
 # Descriptions :
 
-=> Elightwalk_Core extension provides the basic requirements for other elightwalk modules.
-
+Elightwalk_Core extension provides the basic requirements for other elightwalk modules.
 
 # Installation :
 
@@ -25,15 +23,14 @@ Go to Magento root and then below **commands**
 # Supporting Versions :
 
 ```
-  => 2.4.6, 2.4.5
-
+ 2.4.6, 2.4.5
 ```
 
 # Changelog
 
 ## 1.0.2
 
-    => Add a "Configuration" menu to maintain the configuration of other module.
+    => Add a "Configuration" menu to maintain the configuration of other module. 
 
 ## 1.0.1
 
