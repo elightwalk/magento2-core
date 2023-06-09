@@ -14,10 +14,10 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  *
- * @category    Elightwalk
- * @package     Elightwalk_Core
- * @copyright   Copyright (c) Elightwalk (https://www.elightwalk.com/)
- * @license     https://store.elightwalk.com/licence
+ * @category  Elightwalk
+ * @package   Elightwalk_Core
+ * @copyright Copyright (c) Elightwalk (https://www.elightwalk.com/)
+ * @license   https://store.elightwalk.com/licence
  */
 
 namespace Elightwalk\Core\Helper;
@@ -38,18 +38,22 @@ class Quote extends AbstractHelper
      * @var CartRepositoryInterface
      */
     protected $_quoteRepository;
+
     /**
      * @var StorageInterface
      */
     protected $_storageInterface;
+
     /**
      * @var ManagerInterface
      */
     protected $_eventManager;
+
     /**
      * @var StoreManagerInterface
      */
     protected $_storeManager;
+
     /**
      * __construct
      *
@@ -72,6 +76,13 @@ class Quote extends AbstractHelper
         $this->_eventManager     = $eventManager;
         $this->_storeManager     = $storeManager;
     }
+
+    /**
+     * RestoreQuote
+     *
+     * @param object $order
+     * @return void|bool
+     */
     public function restoreQuote($order)
     {
         /** @var Order $order */
@@ -91,23 +102,24 @@ class Quote extends AbstractHelper
     }
 
     /**
-     * Replace the quote in the session with a specified object
+     * ReplaceQuote
      *
-     * @param \Magento\Quote\Model\Quote $quote
-     * @return $this
+     * @param object $quote
+     * @param object $order
+     * @return void
      */
     public function replaceQuote($quote, $order)
     {
         $this->setQuoteId($quote->getId(), $order);
         return $this;
     }
-    
+
     /**
-     * Set the current session's quote id
+     * SetQuoteId
      *
      * @param int $quoteId
+     * @param object $order
      * @return void
-     * @codeCoverageIgnore
      */
     public function setQuoteId($quoteId, $order)
     {
