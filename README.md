@@ -28,6 +28,11 @@ Go to Magento root and then below **commands**
 
 # Changelog
 
+## 1.0.3
+
+    => Remove restoreQuote functionality from graphql and rest api, create new seprate module
+    => Created new file Config.php instead of Data.php
+
 ## 1.0.2
 
     => Add a "Configuration" menu to maintain the configuration of other module. 

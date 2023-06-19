@@ -1,9 +1,0 @@
-type Mutation {
-    ewRestoreQuote (
-        input: EwRestoreQuoteInput
-    ): Cart @resolver(class: "\\Elightwalk\\Core\\Graphql\\Resolver\\Quote\\RestoreQuote")
-}
-
-input EwRestoreQuoteInput {
-    increment_id: String! @doc(description: "Order Increment Id")
-}
