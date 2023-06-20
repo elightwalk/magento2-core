@@ -11,7 +11,7 @@ Elightwalk_Core extension provides the basic requirements for other elightwalk m
 Go to Magento root and then below **commands**
 
 ```
- composer require elightwalk/magento2_core
+ composer require elightwalk/magento2-core
  php bin/magento module:enable Elightwalk_Core
  php bin/magento setup:upgrade
  php bin/magento setup:di:compile
@@ -26,7 +26,7 @@ Go to Magento root and then below **commands**
  2.4.6, 2.4.5
 ```
 
-# Changelog
+# Change Log :
 
 ## 1.0.3
 
