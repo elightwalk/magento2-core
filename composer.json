@@ -1,5 +1,5 @@
 {
-    "name": "elightwalk/magento2_core",
+    "name": "elightwalk/magento2-core",
     "description": "Elightwalk Core module provide basic think for other module of elightwalk.",
     "require": {
       "php": "~7.4|^8.1"
