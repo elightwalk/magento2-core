@@ -1,4 +1,4 @@
-# Name :
+# Name : Magento 2 Core
 
 Elightwalk Core Extension.
 
