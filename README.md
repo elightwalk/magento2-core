@@ -2,11 +2,12 @@
 
 Elightwalk Core Extension.
 
-# Descriptions :
+# Descriptions 
 
 Elightwalk_Core extension provides the basic requirements for other elightwalk modules.
 
-# Installation :
+# How to Install Elightwalk Core
+### Installation via Composer
 
 Go to Magento root and then below **commands**
 
