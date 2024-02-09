@@ -25,5 +25,17 @@
         <tab id="elightwalk" translate="label" class="elightwalk-tab" sortOrder="10">
             <label>Elightwalk</label>
         </tab>
+        <section id="elightwalk" translate="label" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" >
+            <label>Core</label>
+            <tab>elightwalk</tab>
+            <resource>Elightwalk_Core::elightwalk</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General</label>
+                <field id="secret_key" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Secret Key</label>
+                    <frontend_model>Elightwalk\Core\Block\Adminhtml\System\Config\SecretKey</frontend_model>
+                </field>
+            </group>
+        </section>
     </system>
 </config>
