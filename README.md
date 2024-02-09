@@ -28,6 +28,10 @@ Go to Magento root and then below **commands**
 
 # Change Log :
 
+## 1.0.4
+
+    => Add "Secret Key" in system configuration
+
 ## 1.0.3
 
     => Remove restoreQuote functionality from graphql and rest api, create new separate module

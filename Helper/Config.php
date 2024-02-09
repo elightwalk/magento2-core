@@ -41,6 +41,8 @@ use Magento\Framework\App\Helper\Context;
 
 class Config extends \Magento\Framework\App\Helper\AbstractHelper
 {
+    const XML_CONFIG_GENERAL_SECRET_KRY = "elightwalk/general/secret_key";
+
     /**
      * Helper module name
      *
@@ -116,16 +118,16 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
         Context $context
     ) {
         $this->_moduleManager = $context->getModuleManager();
-        $this->_logger = $context->getLogger();
-        $this->_request = $context->getRequest();
-        $this->_urlBuilder = $context->getUrlBuilder();
-        $this->_httpHeader = $context->getHttpHeader();
-        $this->_eventManager = $context->getEventManager();
+        $this->_logger        = $context->getLogger();
+        $this->_request       = $context->getRequest();
+        $this->_urlBuilder    = $context->getUrlBuilder();
+        $this->_httpHeader    = $context->getHttpHeader();
+        $this->_eventManager  = $context->getEventManager();
         $this->_remoteAddress = $context->getRemoteAddress();
-        $this->_cacheConfig = $context->getCacheConfig();
-        $this->_urlEncoder = $context->getUrlEncoder();
-        $this->_urlDecoder = $context->getUrlDecoder();
-        $this->_scopeConfig = $context->getScopeConfig();
+        $this->_cacheConfig   = $context->getCacheConfig();
+        $this->_urlEncoder    = $context->getUrlEncoder();
+        $this->_urlDecoder    = $context->getUrlDecoder();
+        $this->_scopeConfig   = $context->getScopeConfig();
 
         parent::__construct($context);
     }
@@ -144,5 +146,34 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
             ScopeInterface::SCOPE_STORE,
             $storeId
         );
+    }
+
+    /**
+     * Encrypt data
+     *
+     * @param string $value
+     * @param int|null $storeId
+     *
+     * @return string
+     */
+    public function cryptoJsAesEncrypt($value, $storeId = null)
+    {
+        $passphrase = $this->_scopeConfig->getValue(
+            self::XML_CONFIG_GENERAL_SECRET_KRY,
+            ScopeInterface::SCOPE_STORE,
+            $storeId
+        );
+        $salt       = openssl_random_pseudo_bytes(8);
+        $salted     = '';
+        $dx         = '';
+        while (strlen($salted) < 48) {
+            $dx     = md5($dx . $passphrase . $salt, true);
+            $salted .= $dx;
+        }
+        $key            = substr($salted, 0, 32);
+        $iv             = substr($salted, 32, 16);
+        $encrypted_data = openssl_encrypt(json_encode($value), 'aes-256-cbc', $key, 1, $iv);
+        $data           = array("ct" => base64_encode($encrypted_data), "iv" => bin2hex($iv), "s" => bin2hex($salt));
+        return json_encode($data);
     }
 }
